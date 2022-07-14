@@ -1,6 +1,6 @@
 ﻿namespace AdminApplication
 {
-    partial class Form1
+    partial class frmAdmin
     {
         /// <summary>
         /// Required designer variable.
