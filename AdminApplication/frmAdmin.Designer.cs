@@ -52,7 +52,19 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblEndDate = new System.Windows.Forms.Label();
+            this.lblCustomer = new System.Windows.Forms.Label();
+            this.lblStartDate = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cbProjects = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lbTasks = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnAddTask = new System.Windows.Forms.Button();
+            this.cbTeams = new System.Windows.Forms.ComboBox();
             this.txtTaskEnd = new System.Windows.Forms.TextBox();
             this.txtTaskStart = new System.Windows.Forms.TextBox();
             this.txtTaskName = new System.Windows.Forms.TextBox();
@@ -60,18 +72,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.cbTeams = new System.Windows.Forms.ComboBox();
-            this.btnAddTask = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.lbTasks = new System.Windows.Forms.ListBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.cbProjects = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -80,8 +80,8 @@
             this.groupBox1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -308,9 +308,9 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.label17);
+            this.groupBox2.Controls.Add(this.lblEndDate);
+            this.groupBox2.Controls.Add(this.lblCustomer);
+            this.groupBox2.Controls.Add(this.lblStartDate);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.label14);
@@ -324,6 +324,99 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Existing Projects";
+            // 
+            // lblEndDate
+            // 
+            this.lblEndDate.AutoSize = true;
+            this.lblEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEndDate.Location = new System.Drawing.Point(517, 20);
+            this.lblEndDate.Name = "lblEndDate";
+            this.lblEndDate.Size = new System.Drawing.Size(69, 13);
+            this.lblEndDate.TabIndex = 9;
+            this.lblEndDate.Text = "lblEndDate";
+            // 
+            // lblCustomer
+            // 
+            this.lblCustomer.AutoSize = true;
+            this.lblCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomer.Location = new System.Drawing.Point(323, 66);
+            this.lblCustomer.Name = "lblCustomer";
+            this.lblCustomer.Size = new System.Drawing.Size(72, 13);
+            this.lblCustomer.TabIndex = 8;
+            this.lblCustomer.Text = "lblCustomer";
+            // 
+            // lblStartDate
+            // 
+            this.lblStartDate.AutoSize = true;
+            this.lblStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartDate.Location = new System.Drawing.Point(338, 20);
+            this.lblStartDate.Name = "lblStartDate";
+            this.lblStartDate.Size = new System.Drawing.Size(74, 13);
+            this.lblStartDate.TabIndex = 7;
+            this.lblStartDate.Text = "lblStartDate";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(249, 66);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(54, 13);
+            this.label16.TabIndex = 6;
+            this.label16.Text = "Customer:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(428, 20);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(77, 13);
+            this.label15.TabIndex = 5;
+            this.label15.Text = "Expected End:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(249, 20);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(80, 13);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "Expected Start:";
+            // 
+            // cbProjects
+            // 
+            this.cbProjects.FormattingEnabled = true;
+            this.cbProjects.Location = new System.Drawing.Point(94, 29);
+            this.cbProjects.Name = "cbProjects";
+            this.cbProjects.Size = new System.Drawing.Size(121, 21);
+            this.cbProjects.TabIndex = 3;
+            this.cbProjects.SelectedIndexChanged += new System.EventHandler(this.cbProjects_SelectedIndexChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(12, 32);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(76, 13);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "Select Project:";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.lbTasks);
+            this.groupBox4.Location = new System.Drawing.Point(319, 151);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(284, 218);
+            this.groupBox4.TabIndex = 1;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Tasks";
+            // 
+            // lbTasks
+            // 
+            this.lbTasks.FormattingEnabled = true;
+            this.lbTasks.Location = new System.Drawing.Point(7, 20);
+            this.lbTasks.Name = "lbTasks";
+            this.lbTasks.Size = new System.Drawing.Size(271, 186);
+            this.lbTasks.TabIndex = 0;
             // 
             // groupBox3
             // 
@@ -342,6 +435,24 @@
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Add Task";
+            // 
+            // btnAddTask
+            // 
+            this.btnAddTask.Location = new System.Drawing.Point(88, 183);
+            this.btnAddTask.Name = "btnAddTask";
+            this.btnAddTask.Size = new System.Drawing.Size(75, 23);
+            this.btnAddTask.TabIndex = 8;
+            this.btnAddTask.Text = "Add";
+            this.btnAddTask.UseVisualStyleBackColor = true;
+            this.btnAddTask.Click += new System.EventHandler(this.btnAddTask_Click);
+            // 
+            // cbTeams
+            // 
+            this.cbTeams.FormattingEnabled = true;
+            this.cbTeams.Location = new System.Drawing.Point(119, 136);
+            this.cbTeams.Name = "cbTeams";
+            this.cbTeams.Size = new System.Drawing.Size(121, 21);
+            this.cbTeams.TabIndex = 7;
             // 
             // txtTaskEnd
             // 
@@ -402,117 +513,6 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "Name:";
             // 
-            // cbTeams
-            // 
-            this.cbTeams.FormattingEnabled = true;
-            this.cbTeams.Location = new System.Drawing.Point(119, 136);
-            this.cbTeams.Name = "cbTeams";
-            this.cbTeams.Size = new System.Drawing.Size(121, 21);
-            this.cbTeams.TabIndex = 7;
-            // 
-            // btnAddTask
-            // 
-            this.btnAddTask.Location = new System.Drawing.Point(88, 183);
-            this.btnAddTask.Name = "btnAddTask";
-            this.btnAddTask.Size = new System.Drawing.Size(75, 23);
-            this.btnAddTask.TabIndex = 8;
-            this.btnAddTask.Text = "Add";
-            this.btnAddTask.UseVisualStyleBackColor = true;
-            this.btnAddTask.Click += new System.EventHandler(this.btnAddTask_Click);
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.lbTasks);
-            this.groupBox4.Location = new System.Drawing.Point(319, 151);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(284, 218);
-            this.groupBox4.TabIndex = 1;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Tasks";
-            // 
-            // lbTasks
-            // 
-            this.lbTasks.FormattingEnabled = true;
-            this.lbTasks.Location = new System.Drawing.Point(7, 20);
-            this.lbTasks.Name = "lbTasks";
-            this.lbTasks.Size = new System.Drawing.Size(271, 186);
-            this.lbTasks.TabIndex = 0;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(12, 32);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(76, 13);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "Select Project:";
-            // 
-            // cbProjects
-            // 
-            this.cbProjects.FormattingEnabled = true;
-            this.cbProjects.Location = new System.Drawing.Point(94, 29);
-            this.cbProjects.Name = "cbProjects";
-            this.cbProjects.Size = new System.Drawing.Size(121, 21);
-            this.cbProjects.TabIndex = 3;
-            this.cbProjects.SelectedIndexChanged += new System.EventHandler(this.cbProjects_SelectedIndexChanged);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(249, 20);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(80, 13);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "Expected Start:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(428, 20);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(77, 13);
-            this.label15.TabIndex = 5;
-            this.label15.Text = "Expected End:";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(249, 66);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(54, 13);
-            this.label16.TabIndex = 6;
-            this.label16.Text = "Customer:";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(338, 20);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(74, 13);
-            this.label17.TabIndex = 7;
-            this.label17.Text = "lblStartDate";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(323, 66);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(72, 13);
-            this.label18.TabIndex = 8;
-            this.label18.Text = "lblCustomer";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(517, 20);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(69, 13);
-            this.label19.TabIndex = 9;
-            this.label19.Text = "lblEndDate";
-            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -538,9 +538,9 @@
             this.tabPage4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -588,9 +588,9 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ListBox lbTasks;
         private System.Windows.Forms.Button btnAddTask;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblEndDate;
+        private System.Windows.Forms.Label lblCustomer;
+        private System.Windows.Forms.Label lblStartDate;
         private System.Windows.Forms.Label label16;
     }
 }

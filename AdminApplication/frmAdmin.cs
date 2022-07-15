@@ -91,11 +91,14 @@ namespace AdminApplication
         {
             DateTime startDate;
             DateTime endDate;
-            if(txtProjectName.Text == "")
+
+            if(txtProjectName.Text == "" || txtProjectStart.Text == "" || txtProjectEnd.Text == "" || cbCustomer.Text == "")
             {
                 MessageBox.Show("You need to fill in the name field");
                 return;
             }
+
+
 
             try
             {
@@ -164,7 +167,7 @@ namespace AdminApplication
             DateTime startDate;
             DateTime endDate;
 
-            if (txtTaskName.Text == "")
+            if (txtTaskName.Text == "" || txtTaskStart.Text == "" || txtTaskEnd.Text == "" || cbTeams.Text == "")
             {
                 MessageBox.Show("You need to fill in the name field");
                 return;
