@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PTSLibrary;
 using PTSLibrary.Facade_Objects;
+using System.Runtime.Remoting;
+using System.Runtime.Remoting.Channels;
+using System.Runtime.Remoting.Channels.Http;
+
 
 namespace AdminApplication
 {
@@ -26,7 +30,10 @@ namespace AdminApplication
         public frmAdmin()
         {
             InitializeComponent();
-            facade = new PTSAdminFacade();
+            HttpChannel channel = new HttpChannel();
+            ChannelServices.RegisterChannel(channel, false);
+            facade = (PTSAdminFacade)RemotingServices.Connect(typeof(PTSAdminFacade),"http://localhost:50000/PTSAdminFacade");
+
             adminId = 0;
         }
 
