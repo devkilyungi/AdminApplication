@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using PTSLibrary;
 using PTSLibrary.Facade_Objects;
@@ -19,24 +12,27 @@ namespace AdminApplication
     public partial class frmAdmin : Form
     {
         private PTSAdminFacade facade;
+
+      
+
         private int adminId;
         private Customer[] customers;
         private Project[] projects;
         private Team[] teams;
         private Project selectedProject;
-        private PTSLibrary.Task[] tasks;
+        private Task[] tasks;
        
 
-        public frmAdmin()
+       public frmAdmin()
         {
             InitializeComponent();
-            HttpChannel channel = new HttpChannel();
-            ChannelServices.RegisterChannel(channel, false);
-            facade = (PTSAdminFacade)RemotingServices.Connect(typeof(PTSAdminFacade),"http://localhost:50000/PTSAdminFacade");
-
+          HttpChannel channel = new HttpChannel();
+         ChannelServices.RegisterChannel(channel, false);
+          facade = (PTSAdminFacade)RemotingServices.Connect(typeof(PTSAdminFacade),"http://localhost:50000/PTSAdminFacade");
+          facade = new PTSAdminFacade();
             adminId = 0;
         }
-
+      
         private void frmAdmin_Load(object sender, EventArgs e)
         {
 
@@ -46,6 +42,7 @@ namespace AdminApplication
         {
             try
             {
+
                 adminId = facade.Authenticate(this.txtUsername.Text, this.txtPassword.Text);
                 if(adminId != 0)
                 {
